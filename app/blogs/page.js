@@ -14,10 +14,6 @@ const blogs = async () => {
                     </Link>
                 ))}
             </div>
-
-            {/* <Link href={"/blogs"} className="btn">
-                See More
-            </Link> */}
         </div>
     );
 };
