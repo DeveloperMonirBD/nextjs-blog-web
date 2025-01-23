@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import FeaturedPosts from './components/FeaturedPosts';
 
@@ -10,7 +8,7 @@ const Home = async () => {
 
   return (
     <div className='container mx-auto px-3'>
-      <h1 className='text-3xl text-center font-bold py-10'>Featured Products</h1>
+      <h1 className='text-3xl text-center font-bold pb-10 pt-20'>Featured Products</h1>
       <div>
         <FeaturedPosts data={data} />
       </div>
