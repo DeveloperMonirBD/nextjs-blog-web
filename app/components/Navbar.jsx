@@ -5,7 +5,6 @@ import Link from "next/link";
 const Navbar = async() => {
     const { getUser } = getKindeServerSession()
     const user = await getUser()
-    console.log(user)
     return (
         <div className="bg-gray-200 text-gray-700">
             <nav className="container mx-auto flex justify-between py-4">

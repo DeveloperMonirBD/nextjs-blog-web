@@ -1,9 +1,21 @@
 
 
-export default function Home() {
+import React from 'react';
+import FeaturedPosts from './components/FeaturedPosts';
+
+const Home = async () => {
+  
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  const data = await res.json()
+
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className='container mx-auto px-3'>
+      <h1 className='text-3xl text-center font-bold py-10'>Featured Products</h1>
+      <div>
+        <FeaturedPosts data={data} />
+      </div>
     </div>
   );
-}
+};
+
+export default Home;
