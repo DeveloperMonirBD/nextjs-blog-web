@@ -27,18 +27,6 @@ const Navbar = async () => {
                             <Link href="/profile" className="hover:text-orange-600">
                                 Profile
                             </Link>
-                        </>
-                    ) : (
-                        <>
-                            <Link href="/api/auth/login" className="hover:text-orange-600">
-                                Profile
-                            </Link>
-                        </>
-                    )}
-
-                    {/* Show a "Login" button if the user is not authenticated, and a "Logout" button if they are.  */}
-                    {user ? (
-                        <>
                             <Link href="/api/auth/logout" className="hover:text-orange-600">
                                 Sign Out
                             </Link>
@@ -46,13 +34,15 @@ const Navbar = async () => {
                     ) : (
                         <>
                             <Link href="/api/auth/login" className="hover:text-orange-600">
+                                Profile
+                            </Link>
+
+                            <Link href="/api/auth/login" className="hover:text-orange-600">
                                 Sign In
                             </Link>
-                            {/* <Link href="/api/auth/register" className="hover:text-orange-600">
-                                Sign Up
-                            </Link> */}
                         </>
                     )}
+                   
                 </div>
             </nav>
         </div>
