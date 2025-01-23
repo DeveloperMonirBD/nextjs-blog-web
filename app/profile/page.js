@@ -5,6 +5,7 @@ import Link from 'next/link';
 const Profile = async () => {
     const { isAuthenticated, getUser } = getKindeServerSession();
     const isUserAuthenticated = await isAuthenticated();
+    
     const user = await getUser();
 
     return (
