@@ -1,16 +1,17 @@
-'use client';
-import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs';
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Profile = () => {
-     const { isAuthenticated, getUser} = useKindeBrowserClient();
-    const user = getUser();
+const Profile = async () => {
+    const { isAuthenticated, getUser } = getKindeServerSession();
+    const isUserAuthenticated = await isAuthenticated();
+    console.log(isAuthenticated);
+    const user = await getUser();
 
     return (
         <div className="text-center mt-20 text-2xl px-3">
             <div className="max-w-xl mx-auto bg-gray-100 py-20 rounded-md">
-                {isAuthenticated ? (
+                {isUserAuthenticated ? (
                     <div className="flex flex-col mx-auto justify-center items-center gap-6">
                         <h1>Welcome to my Profile</h1>
                         <Image src={user.picture || ''} alt={user.given_name || ''} width={100} height={100} />
