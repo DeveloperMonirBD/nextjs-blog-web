@@ -8,8 +8,8 @@ const Profile = async () => {
     const user = await getUser();
 
     return (
-        <div className="text-center mt-20 text-2xl">
-            <div className="max-w-xl mx-auto bg-gray-100 py-12 rounded-md">
+        <div className="text-center mt-20 text-2xl px-3">
+            <div className="max-w-xl mx-auto bg-gray-100 py-20 rounded-md">
                 {isUserAuthenticated ? (
                     <div className="flex flex-col mx-auto justify-center items-center gap-6">
                         <h1>Welcome to my Profile</h1>

@@ -1,6 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Next.js Blog Project
+
+This project is a simple Next.js blog application with dynamic routing.
+
 ## Getting Started
+
+These instructions will help you set up and run the project on your local machine for development and testing purposes.
 
 First, run the development server:
 
