@@ -2,11 +2,11 @@ import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import Link from 'next/link';
 
 const Navbar = async () => {
-    const { isAuthenticated, getUser } = getKindeServerSession();
+    const { getUser } = getKindeServerSession();
     const user = await getUser();
     // console.log(user)
 
-    const isUserAuthenticated = await isAuthenticated();
+    // const isUserAuthenticated = await isAuthenticated();
 
     return (
         <div className="bg-gray-200 text-gray-700">
@@ -22,7 +22,7 @@ const Navbar = async () => {
                     </Link>
 
                     {/* Redirect users to the login page if they are not authenticated. */}
-                    {isUserAuthenticated ? (
+                    {/* {isUserAuthenticated ? (
                         <>
                             <Link href="/profile" className="hover:text-orange-600">
                                 Profile
@@ -34,7 +34,11 @@ const Navbar = async () => {
                                 Profile
                             </Link>
                         </>
-                    )}
+                    )} */}
+
+                    <Link href="/profile" className="hover:text-orange-600">
+                        Profile
+                    </Link>
 
                     {/* Show a "Login" button if the user is not authenticated, and a "Logout" button if they are.  */}
                     {user ? (
