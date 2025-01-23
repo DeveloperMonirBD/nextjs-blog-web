@@ -4,8 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const Profile = () => {
-     const { isAuthenticated, getUser} = useKindeBrowserClient();
+    const { isAuthenticated, getUser } = useKindeBrowserClient();
+    console.log(isAuthenticated)
     const user = getUser();
+    console.log(user)
 
     return (
         <div className="text-center mt-20 text-2xl px-3">
