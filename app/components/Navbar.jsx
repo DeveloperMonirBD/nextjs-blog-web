@@ -21,8 +21,12 @@ const Navbar = async () => {
                         Home
                     </Link>
 
+                    <Link href="/profile" className="hover:text-orange-600">
+                        Profile
+                    </Link>
+
                     {/* Redirect users to the login page if they are not authenticated. */}
-                    {isUserAuthenticated ? (
+                    {/* {isUserAuthenticated ? (
                         <>
                             <Link href="/profile" className="hover:text-orange-600">
                                 Profile
@@ -34,7 +38,7 @@ const Navbar = async () => {
                                 Profile
                             </Link>
                         </>
-                    )}
+                    )} */}
 
                     {/* Show a "Login" button if the user is not authenticated, and a "Logout" button if they are.  */}
                     {user ? (
