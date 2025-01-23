@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const Profile = () => {
+    console.log("profile")
     const { isAuthenticated, getUser } = useKindeBrowserClient();
     console.log(isAuthenticated)
     const user = getUser();
